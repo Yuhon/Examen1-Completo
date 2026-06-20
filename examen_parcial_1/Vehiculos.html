@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehiculos API</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Vehiculos API</h1>
+
+<!-- ======== CREAR ======== -->
+<div class="form-section">
+  <h2>Crear Vehiculo</h2>
+  <input type="text"   id="modelo"              placeholder="Modelo">
+  <input type="text"   id="categoria"           placeholder="Categoría">
+  <input type="text"   id="descripcion"         placeholder="Descripción">
+  <input type="number" id="precioPorDia"        placeholder="Precio por día">
+  <input type="number" id="unidadesDisponibles" placeholder="Unidades disponibles">
+  <button class="btn crear" onclick="crear()">Crear</button>
+  <p id="msg-crear"></p>
+</div>
+
+<hr>
+
+<!-- ======== BUSCAR POR ID ======== -->
+<div class="form-section">
+  <h2>Buscar Vehiculo por ID</h2>
+  <input type="number" id="buscar-id" placeholder="ID">
+  <button class="btn buscar" onclick="buscarPorId()">Buscar</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Modelo</th>
+        <th>Categoría</th>
+        <th>Descripción</th>
+        <th>Precio por día</th>
+        <th>Unidades disponibles</th>
+      </tr>
+    </thead>
+    <tbody id="msg-buscar">
+    </tbody>
+  </table>
+</div>
+
+<hr>
+
+<!-- ======== ACTUALIZAR ======== -->
+<div class="form-section">
+  <h2>Actualizar Vehiculo</h2>
+  <input type="number" id="upd-id"                  placeholder="ID a actualizar">
+  <input type="text"   id="upd-modelo"              placeholder="Nuevo modelo">
+  <input type="text"   id="upd-categoria"           placeholder="Nueva categoría">
+  <input type="text"   id="upd-descripcion"         placeholder="Nueva descripción">
+  <input type="number" id="upd-precioPorDia"        placeholder="Nuevo precio por día">
+  <input type="number" id="upd-unidadesDisponibles" placeholder="Nuevas unidades disponibles">
+  <button class="btn actualizar" onclick="actualizar()">Actualizar</button>
+  <p id="msg-actualizar"></p>
+</div>
+
+<hr>
+
+<!-- ======== ELIMINAR ======== -->
+<div class="form-section">
+  <h2>Eliminar Vehiculo</h2>
+  <input type="number" id="eliminar-id" placeholder="ID a eliminar">
+  <button class="btn eliminar" onclick="eliminar()">Eliminar</button>
+  <p id="msg-eliminar"></p>
+</div>
+
+<hr>
+
+<!-- ======== LISTA ======== -->
+<div class="form-section">
+  <h2>Lista de Vehiculos</h2>
+  <button class="btn lista" onclick="cargarVehiculos()">Cargar lista</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Modelo</th>
+        <th>Categoría</th>
+        <th>Descripción</th>
+        <th>Precio por día</th>
+        <th>Unidades disponibles</th>
+      </tr>
+    </thead>
+    <tbody id="msg-lista">
+    </tbody>
+  </table>
+</div>
+
+<script src="/vehiculo.js"></script>
+</body>
+</html>
